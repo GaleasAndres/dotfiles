@@ -1,0 +1,113 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\udb80\udea0 {{ .UserName }} on",
+          "foreground": "#45F1C2",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "template": " \uf07b {{ .Path }} ",
+          "foreground": "#0CA0D8",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_upstream_icon": true
+          },
+          "template": "\uf09b {{ .HEAD }} {{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}",
+          "foreground": "#14A5AE",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "source": "pwsh"
+          },
+          "template": "| \uebd8 [PWSH] {{ .Name }} ",
+          "foreground": "#bd93f9",
+          "type": "az",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "source": "cli"
+          },
+          "template": "| \uebd8 [CLI] {{ .Name }} ",
+          "foreground": "#ff79c6",
+          "type": "az",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none",
+            "style": "austin",
+            "threshold": 0
+          },
+          "template": "{{ .FormattedMs }} ",
+          "foreground": "#45F1C2",
+          "type": "executiontime",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "{{ .CurrentDate | date \"15:04:05\" }} ",
+          "foreground": "#ffffff",
+          "type": "time",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue3bf ",
+          "foreground": "#cd5e42",
+          "type": "root",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\uea9f ",
+          "foreground": "#CD4277",
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
+}
